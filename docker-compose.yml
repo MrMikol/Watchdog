@@ -8,5 +8,9 @@ services:
     network_mode: host
     pid: host
     privileged: true
+    labels:
+      - "maintainer=michael"
+      - "purpose=host-network-watchdog"
+      - "risk=privileged-host-control"
     volumes:
       - /var/lib/net-watchdog:/var/lib/net-watchdog
