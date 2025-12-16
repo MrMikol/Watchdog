@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  net-watchdog:
+    build: .
+    container_name: net-watchdog
+    restart: unless-stopped
+    network_mode: host
+    pid: host
+    privileged: true
+    volumes:
+      - /var/lib/net-watchdog:/var/lib/net-watchdog
